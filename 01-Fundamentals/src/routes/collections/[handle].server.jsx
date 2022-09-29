@@ -1,9 +1,9 @@
 import {useShopQuery, flattenConnection, Seo} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 
-import LoadMoreProducts from '../../components/LoadMoreProducts.client';
+import LoadMoreProducts from '../../components/category/LoadMoreProducts.client';
 import Layout from '../../components/Layout.server';
-import ProductCard from '../../components/ProductCard';
+import ProductCard from '../../components/product/ProductCard';
 import NotFound from '../../components/NotFound.server';
 
 export default function Collection({

@@ -8,9 +8,9 @@ import {
 import gql from 'graphql-tag';
 
 import Layout from '../components/Layout.server';
-import FeaturedCollection from '../components/FeaturedCollection';
-import ProductCard from '../components/ProductCard';
-import Welcome from '../components/Welcome.server';
+import FeaturedCollection from '../components/home/FeaturedCollection';
+import ProductCard from '../components/product/ProductCard';
+import Welcome from '../components/home/Welcome.server';
 import {Suspense} from 'react';
 
 export default function Index({country = {isoCode: 'US'}}) {

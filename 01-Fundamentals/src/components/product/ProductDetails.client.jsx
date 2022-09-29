@@ -14,7 +14,7 @@ import Gallery from './Gallery.client';
 import {
   BUTTON_PRIMARY_CLASSES,
   BUTTON_SECONDARY_CLASSES,
-} from './Button.client';
+} from '../Button.client';
 
 function AddToCartMarkup() {
   const {selectedVariant} = useProduct();

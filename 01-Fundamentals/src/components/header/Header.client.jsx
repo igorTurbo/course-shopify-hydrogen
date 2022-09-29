@@ -25,18 +25,17 @@ export default function Header({collections, storeName}) {
   return (
     <header className="h-20 lg:h-32" role="banner">
       <div
-        className={`fixed z-20 h-20 lg:h-32 w-full border-b border-gray-200 px-6 md:px-8 md:py-6 lg:pt-8 lg:pb-0 mx-auto bg-white ${
+        className={`fixed z-20 h-20 lg:h-20 w-full px-6 md:px-8 md:py-6 lg:pt-3 lg:pb-0 mx-auto bg-primary text-white ${
           isMobileNavOpen ? '' : 'bg-opacity-95'
         }`}
       >
         <div
-          className="h-full flex lg:flex-col place-content-between"
+          className="h-full flex lg:flex-col place-content-between lg:max-w-7xl m-auto"
           style={{
             paddingRight: isCartOpen ? scrollbarWidth : 0,
           }}
         >
           <div className="text-center w-full flex justify-between items-center">
-            <CountrySelector />
             <MobileNavigation
               collections={collections}
               isOpen={isMobileNavOpen}
@@ -48,13 +47,18 @@ export default function Header({collections, storeName}) {
             >
               {storeName}
             </Link>
-            <CartToggle
-              handleClick={() => {
-                if (isMobileNavOpen) setIsMobileNavOpen(false);
-              }}
-            />
+            <Navigation collections={collections} storeName={storeName} />
+            <div className="flex">
+              <div className="flex items-center mr-8">
+                <CountrySelector />
+              </div>
+              <CartToggle
+                handleClick={() => {
+                  if (isMobileNavOpen) setIsMobileNavOpen(false);
+                }}
+              />
+            </div>
           </div>
-          <Navigation collections={collections} storeName={storeName} />
         </div>
       </div>
     </header>

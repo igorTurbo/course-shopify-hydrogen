@@ -6,9 +6,9 @@ import {
 } from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 
-import Header from './Header.client';
-import Footer from './Footer.server';
-import Cart from './Cart.client';
+import Header from './header/Header.client';
+import Footer from './footer/Footer.server';
+import Cart from './header/Cart.client';
 import {Suspense} from 'react';
 
 /**
