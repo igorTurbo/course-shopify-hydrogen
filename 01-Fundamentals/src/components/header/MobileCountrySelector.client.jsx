@@ -3,7 +3,7 @@ import {useCountry} from '@shopify/hydrogen/client';
 import {Listbox} from '@headlessui/react';
 import SpinnerIcon from '../SpinnerIcon.client';
 
-import {ArrowIcon, CheckIcon} from './CountrySelector.client';
+import {ArrowIconMobile, CheckIcon} from './CountrySelector.client';
 
 /**
  * A client component that selects the appropriate country to display for products on a mobile storefront
@@ -42,7 +42,7 @@ export default function MobileCountrySelector() {
   );
 
   return (
-    <div className="mt-8 rounded border border-gray-200 w-full">
+    <div className="mt-8 rounded border border-gray-200 w-full text-black">
       <Listbox onChange={setCountry}>
         {({open}) => {
           setTimeout(() => setListboxOpen(open));
@@ -50,7 +50,7 @@ export default function MobileCountrySelector() {
             <>
               <Listbox.Button className="w-full flex justify-between text-sm items-center py-5 px-7">
                 {selectedCountry.name}
-                <ArrowIcon isOpen={open} />
+                <ArrowIconMobile isOpen={open} />
               </Listbox.Button>
               <Listbox.Options className="w-full px-3 pb-2 text-lg overflow-y-auto h-64">
                 <Listbox.Option
