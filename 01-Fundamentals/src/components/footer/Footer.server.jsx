@@ -6,21 +6,23 @@ import {Link} from '@shopify/hydrogen';
 export default function Footer({collection, product}) {
   return (
     <footer role="contentinfo">
-      <div className="relative bg-white border-t border-b border-black border-opacity-5">
+      <div className="relative bg-black border-t border-b border-black border-opacity-5">
         <div className="mx-auto max-w-7xl px-4 py-14 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h2 className="text-md font-medium uppercase mb-4">Community</h2>
+            <h2 className="text-md text-white font-medium uppercase mb-4">
+              Community
+            </h2>
             <ul className="mt-8 space-y-4">
-              <li className="text-sm font-medium text-gray-600 hover:text-gray-900">
+              <li className="text-sm font-medium text-white hover:text-gray-200">
                 <a
-                  href="https://github.com/Shopify/hydrogen/discussions"
+                  href="https://github.com/rafaelstz/course-shopify-hydrogen/discussions"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center"
                 >
                   <svg
                     aria-hidden="true"
-                    className="fill-current text-gray-600 mr-3"
+                    className="fill-current text-white mr-3"
                     width="26"
                     height="20"
                     viewBox="0 0 21 20"
@@ -36,7 +38,7 @@ export default function Footer({collection, product}) {
                   Github discussions
                 </a>
               </li>
-              <li className="text-sm font-medium text-gray-600 hover:text-gray-900">
+              <li className="text-sm font-medium text-white hover:text-gray-200">
                 <a
                   href="https://discord.gg/ppSbThrFaS"
                   target="_blank"
@@ -45,7 +47,7 @@ export default function Footer({collection, product}) {
                 >
                   <svg
                     aria-hidden="true"
-                    className="fill-current text-gray-600 mr-3"
+                    className="fill-current text-white mr-3"
                     width="26"
                     height="20"
                     viewBox="0 0 26 20"
@@ -60,42 +62,56 @@ export default function Footer({collection, product}) {
             </ul>
           </div>
           <div>
-            <h2 className="text-md font-medium uppercase mb-4">Templates</h2>
+            <h2 className="text-md text-white font-medium uppercase mb-4">
+              Templates
+            </h2>
             <ul className="mt-8 space-y-4">
-              <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
+              <li className="flex items-center text-sm font-medium text-white hover:text-gray-200">
                 <Link to="/home">Home</Link>
               </li>
-              <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
+              <li className="flex items-center text-sm font-medium text-white hover:text-gray-200">
                 <Link to={`/products/${product?.handle}`}>Product</Link>
               </li>
-              <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
+              <li className="flex items-center text-sm font-medium text-white hover:text-gray-200">
                 <Link to={`/collections/${collection?.handle}`}>
                   Collection
                 </Link>
               </li>
-              <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
+              <li className="flex items-center text-sm font-medium text-white hover:text-gray-200">
                 <Link to="/404">404</Link>
               </li>
             </ul>
           </div>
           <div>
-            <h2 className="text-md font-medium uppercase mb-4">Docs</h2>
+            <h2 className="text-md text-white font-medium uppercase mb-4">
+              Extra pages
+            </h2>
             <ul className="mt-8 space-y-4">
-              <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
-                <a href="https://shopify.dev/custom-storefronts/hydrogen">
-                  Hydrogen overview
+              <li className="flex items-center text-sm font-medium text-white hover:text-gray-200">
+                <a
+                  href="https://rafaelcg.com/course-shopify-hydrogen-developer-2022"
+                  title="Shopify Hydrogen course"
+                  target="_black"
+                  rel="noreferrer"
+                >
+                  Shopify Hydrogen course
                 </a>
               </li>
-              <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
-                <a href="https://shopify.dev/custom-storefronts/hydrogen/getting-started">
-                  Hydrogen starter template
+              <li className="flex items-center text-sm font-medium text-white hover:text-gray-200">
+                <a
+                  href="https://rafaelcg.com"
+                  title="Instructor Page"
+                  target="_black"
+                  rel="noreferrer"
+                >
+                  Rafael Corrêa Gomes
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="py-6 px-4 md:px-8 bg-gray-50">
+      <div className="py-6 px-4 md:px-8 bg-gray-50 text-center">
         <p className="text-gray-600">© {new Date().getFullYear()} Shopify</p>
       </div>
     </footer>
